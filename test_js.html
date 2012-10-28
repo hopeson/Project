@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>reversePrint</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+    function reversePrint(linkedList) {
+        var arr = [];
+        while(linkedList) {
+            arr.push(linkedList.value);
+            linkedList = linkedList.next;
+        }
+        console.log(arr.reverse());
+    }
+
+    var someList = {
+        value: 1,
+        next: {
+            value: 2,
+            next: {
+                value: 3,
+                next: {
+                    value: 4,
+                    next: null
+                }
+            }
+        }
+    };
+
+    reversePrint(someList);
+
+</script>
+
+</body>
+</html>
